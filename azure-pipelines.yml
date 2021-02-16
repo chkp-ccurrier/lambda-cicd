@@ -13,7 +13,6 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-Settings
 - task: CmdLine@2
   env: 
     CHKP_CLOUDGUARD_ID: $(CHKP_CLOUDGUARD_ID)
