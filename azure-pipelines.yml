@@ -13,6 +13,16 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
+Settings
+- task: CmdLine@2
+  env: 
+    CHKP_CLOUDGUARD_ID: $(CHKP_CLOUDGUARD_ID)
+    CHKP_CLOUDGUARD_SECRET: $(CHKP_CLOUDGAURD_SECRET)
+  inputs:
+    script:
+       echo $(CHKP_CLOUDGUARD_ID)
+  displayName: Showing ID
+
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
